@@ -10,4 +10,10 @@ public class CellTest {
         Assertions.assertFalse(testCell.getFlipped());
     }
 
+    @Test
+    public void testSetFlipped(){
+        Cell testCell = new Cell();
+        testCell.setFlipped();
+        Assertions.assertTrue(testCell.getFlipped());
+    }
 }

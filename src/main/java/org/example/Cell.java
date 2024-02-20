@@ -9,6 +9,7 @@ public class Cell {
         flipped = false;
         flagged = false;
         isBomb = false;
+        adjacentBombs = 0;
     }
 
     public boolean getFlipped(){

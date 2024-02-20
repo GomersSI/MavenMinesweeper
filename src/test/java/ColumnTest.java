@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 public class ColumnTest {
     private Column testColumn;
     @Test
-    public void testGetCell(){
+    void testGetCell(){
         testColumn = new Column(5);
         Assertions.assertFalse(testColumn.getCell(2).getFlipped(), "Failed get cell.");
         testColumn.getCell(2).setFlipped();

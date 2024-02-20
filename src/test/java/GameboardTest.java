@@ -5,41 +5,52 @@ import org.junit.jupiter.api.Test;
 public class GameboardTest {
     private Gameboard testGameboard;
     @Test
-    public void testGetTotalBombs(){
+    void testGetTotalBombs(){
         beforeTest(10, 2);
         Assertions.assertEquals(testGameboard.getTotalBombs(), 2, "Failed get total bombs.");
         beforeTest(10, 4);
         Assertions.assertEquals(testGameboard.getTotalBombs(), 4, "Failed get total bombs.");
     }
     @Test
-    public void testGetColumn(){
+    void testGetColumn(){
         beforeTest(5, 2);
         Assertions.assertFalse(testGameboard.getColumn(2).getCell(2).getBomb(), "Failed get column.");
         Assertions.assertFalse(testGameboard.getColumn(1).getCell(1).getBomb(), "Failed get column.");
     }
     @Test
-    public void testFlipCell(){
+    void testFlipCell(){
         beforeTest(5, 2);
         testGameboard.flipCell(1, 1);
         Assertions.assertTrue(testGameboard.getColumn(1).getCell(1).getFlipped(), "Failed flip cell");
         testGameboard.flipCell(1, 1);
         Assertions.assertTrue(testGameboard.getColumn(1).getCell(1).getFlipped(), "Failed flip cell");
+        beforeTest(5,2);
+        testGameboard.flagCell(1,1);
+        testGameboard.flipCell(1, 1);
+        Assertions.assertFalse(testGameboard.getColumn(1).getCell(1).getFlipped(), "Failed flip cell");
+        beforeTest(5,2);
+        testGameboard.getColumn(1).getCell(1).setBomb();
+        testGameboard.flipCell(1, 1);
+        Assertions.assertTrue(testGameboard.getColumn(1).getCell(1).getFlipped(), "Failed flip cell");
     }
     @Test
-    public void testFlagCell(){
+    void testFlagCell(){
         beforeTest(5, 2);
         testGameboard.flagCell(1, 1);
         Assertions.assertTrue(testGameboard.getColumn(1).getCell(1).getFlagged(), "Failed flip cell");
         testGameboard.flagCell(1, 1);
         Assertions.assertFalse(testGameboard.getColumn(2).getCell(1).getFlagged(), "Failed flip cell");
+        testGameboard.flipCell(1,1);
+        testGameboard.flagCell(1,1);
+        Assertions.assertFalse(testGameboard.getColumn(2).getCell(1).getFlagged(), "Failed flip cell");
     }
     @Test
-    public void testGetFlaggedCells(){
+    void testGetFlaggedCells(){
         beforeTest(5,1);
         Assertions.assertEquals(testGameboard.getFlaggedCells(), 0, "Failed get flagged cells.");
     }
     @Test
-    public void testSetFlaggedCells(){
+    void testSetFlaggedCells(){
         beforeTest(5,1);
         testGameboard.setFlaggedCells(3);
         Assertions.assertEquals(testGameboard.getFlaggedCells(), 3, "Failed set flagged cells.");
@@ -47,7 +58,7 @@ public class GameboardTest {
         Assertions.assertEquals(testGameboard.getFlaggedCells(), 2, "Failed set flagged cells.");
     }
     @Test
-    public void testPlaceBombs(){
+    void testPlaceBombs(){
         beforeTest(5, 2);
         testGameboard.flipCell(1, 1);
         int totalBomb = 0;
@@ -72,12 +83,12 @@ public class GameboardTest {
         Assertions.assertEquals(totalBomb, 3, "Failed test place bombs");
     }
     @Test
-    public void testGetFlippedAdjacent(){
+    void testGetFlippedAdjacent(){
         beforeTest(5, 1);
         Assertions.assertEquals(testGameboard.getFlippedAdjacent().size(), 0,"Failed get flipped adjacent.");
     }
     @Test
-    public void testSetFlippedAdjacent(){
+    void testSetFlippedAdjacent(){
         beforeTest(5, 1);
         testGameboard.setFlippedAdjacent();
         Assertions.assertEquals(testGameboard.getFlippedAdjacent().size(), 0,"Failed get flipped adjacent.");

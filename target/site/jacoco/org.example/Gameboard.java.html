@@ -39,19 +39,19 @@ public class Gameboard {
     }
     public boolean flipCell(int x, int y){
 <span class="fc" id="L41">        Cell currentCell = gameboard.get(x).getCell(y);</span>
-<span class="pc bpc" id="L42" title="1 of 4 branches missed.">        if (!currentCell.getFlipped() &amp;&amp; !currentCell.getFlagged()) {</span>
+<span class="fc bfc" id="L42" title="All 4 branches covered.">        if (!currentCell.getFlipped() &amp;&amp; !currentCell.getFlagged()) {</span>
 <span class="fc" id="L43">            flippedCells++;</span>
 <span class="fc bfc" id="L44" title="All 2 branches covered.">            if (!bombsPlaced) {</span>
 <span class="fc" id="L45">                placeBombs(x, y);</span>
             }
 <span class="fc" id="L47">            currentCell.setFlipped();</span>
-<span class="pc bpc" id="L48" title="1 of 4 branches missed.">            if (!currentCell.getBomb() &amp;&amp; (currentCell.getAdjacentBombs() == 0)) {</span>
+<span class="fc bfc" id="L48" title="All 4 branches covered.">            if (!currentCell.getBomb() &amp;&amp; (currentCell.getAdjacentBombs() == 0)) {</span>
                 try{
 <span class="fc" id="L50">                flipAdjacent(x, y);</span>
 <span class="fc" id="L51">                }catch (Exception e){};</span>
             }
-<span class="fc bfc" id="L53" title="All 2 branches covered.">            if (flippedCells + totalBombs == gameSize * gameSize){</span>
-<span class="fc" id="L54">                NewGameGUI newGame = new NewGameGUI(&quot;Game won&quot;);</span>
+<span class="pc bpc" id="L53" title="1 of 2 branches missed.">            if (flippedCells + totalBombs == gameSize * gameSize){</span>
+<span class="nc" id="L54">                NewGameGUI newGame = new NewGameGUI(&quot;Game won&quot;);</span>
             }
         }
 <span class="fc" id="L57">        return currentCell.getBomb();</span>
@@ -61,7 +61,7 @@ public class Gameboard {
     }
     public void flagCell(int x, int y){
 <span class="fc" id="L63">        Cell currentCell = gameboard.get(x).getCell(y);</span>
-<span class="pc bpc" id="L64" title="1 of 2 branches missed.">        if (!currentCell.getFlipped()) {</span>
+<span class="fc bfc" id="L64" title="All 2 branches covered.">        if (!currentCell.getFlipped()) {</span>
 <span class="fc" id="L65">            currentCell.setFlagged();</span>
         }
 <span class="fc" id="L67">    }</span>
@@ -71,7 +71,7 @@ public class Gameboard {
             do {
 <span class="fc" id="L72">                int newx = rand.nextInt(gameSize);</span>
 <span class="fc" id="L73">                int newy = rand.nextInt(gameSize);</span>
-<span class="pc bpc" id="L74" title="2 of 6 branches missed.">                if (!gameboard.get(newx).getCell(newy).getBomb() &amp;&amp; newx != x &amp;&amp; newy != y){</span>
+<span class="fc bfc" id="L74" title="All 6 branches covered.">                if (!gameboard.get(newx).getCell(newy).getBomb() &amp;&amp; newx != x &amp;&amp; newy != y){</span>
 <span class="fc" id="L75">                    gameboard.get(newx).getCell(newy).setBomb();</span>
 <span class="fc" id="L76">                    addedBomb = true;</span>
                 }
@@ -124,8 +124,8 @@ public class Gameboard {
 <span class="fc bfc" id="L124" title="All 2 branches covered.">                if (j &lt; 0){</span>
 <span class="fc" id="L125">                    j = 0;</span>
                 }
-<span class="fc bfc" id="L127" title="All 2 branches covered.">                else if(j &gt;= gameSize){</span>
-<span class="fc" id="L128">                    break;</span>
+<span class="pc bpc" id="L127" title="1 of 2 branches missed.">                else if(j &gt;= gameSize){</span>
+<span class="nc" id="L128">                    break;</span>
                 }
 <span class="fc" id="L130">                Cell currentCell = gameboard.get(i).getCell(j);</span>
 <span class="fc bfc" id="L131" title="All 2 branches covered.">                if(!currentCell.getFlipped()) {</span>

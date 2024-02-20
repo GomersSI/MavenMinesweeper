@@ -6,45 +6,45 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class NewGameGUI {
-<span class="fc" id="L9">    private int maxSize = 20;</span>
+<span class="nc" id="L9">    private int maxSize = 20;</span>
     private JTextField gridSize;
     private JTextField mineCount;
     private GUI currentGame;
     private JFrame frame;
 
-<span class="fc" id="L15">    public NewGameGUI(String message){</span>
-<span class="fc" id="L16">        frame = new JFrame(message);</span>
-<span class="fc" id="L17">        gridSize = new JTextField(&quot;Grid Size (Max &quot; + maxSize + &quot;)&quot;);</span>
-<span class="fc" id="L18">        mineCount = new JTextField(&quot;Mine count&quot;);</span>
-<span class="fc" id="L19">        JButton startButton = new JButton(&quot;Start Game&quot;);</span>
-<span class="fc" id="L20">        JPanel panel = new JPanel();</span>
+<span class="nc" id="L15">    public NewGameGUI(String message){</span>
+<span class="nc" id="L16">        frame = new JFrame(message);</span>
+<span class="nc" id="L17">        gridSize = new JTextField(&quot;Grid Size (Max &quot; + maxSize + &quot;)&quot;);</span>
+<span class="nc" id="L18">        mineCount = new JTextField(&quot;Mine count&quot;);</span>
+<span class="nc" id="L19">        JButton startButton = new JButton(&quot;Start Game&quot;);</span>
+<span class="nc" id="L20">        JPanel panel = new JPanel();</span>
 
-<span class="fc" id="L22">        JMenuBar mb = new JMenuBar();</span>
-<span class="fc" id="L23">        JMenuItem gridSizeLabel = new JMenuItem(&quot;Grid Size (Max &quot; + maxSize + &quot;)&quot;);</span>
-<span class="fc" id="L24">        JMenuItem mineCountLabel = new JMenuItem(&quot;Mine count&quot;);</span>
-<span class="fc" id="L25">        JMenuItem startLabel = new JMenuItem(&quot;&quot;);</span>
-<span class="fc" id="L26">        mb.add(gridSizeLabel);</span>
-<span class="fc" id="L27">        mb.add(mineCountLabel);</span>
-<span class="fc" id="L28">        mb.add(startLabel);</span>
-<span class="fc" id="L29">        frame.getContentPane().add(BorderLayout.NORTH, mb);</span>
+<span class="nc" id="L22">        JMenuBar mb = new JMenuBar();</span>
+<span class="nc" id="L23">        JMenuItem gridSizeLabel = new JMenuItem(&quot;Grid Size (Max &quot; + maxSize + &quot;)&quot;);</span>
+<span class="nc" id="L24">        JMenuItem mineCountLabel = new JMenuItem(&quot;Mine count&quot;);</span>
+<span class="nc" id="L25">        JMenuItem startLabel = new JMenuItem(&quot;&quot;);</span>
+<span class="nc" id="L26">        mb.add(gridSizeLabel);</span>
+<span class="nc" id="L27">        mb.add(mineCountLabel);</span>
+<span class="nc" id="L28">        mb.add(startLabel);</span>
+<span class="nc" id="L29">        frame.getContentPane().add(BorderLayout.NORTH, mb);</span>
 
-<span class="fc" id="L31">        startButton.addActionListener(new ActionListener() {</span>
+<span class="nc" id="L31">        startButton.addActionListener(new ActionListener() {</span>
             @Override
             public void actionPerformed(ActionEvent e) {
 <span class="nc" id="L34">                startPressed();</span>
 <span class="nc" id="L35">            }</span>
         });
 
-<span class="fc" id="L38">        frame.setSize(400,125);</span>
-<span class="fc" id="L39">        panel.setLayout(new java.awt.GridLayout(1, 3));</span>
+<span class="nc" id="L38">        frame.setSize(400,125);</span>
+<span class="nc" id="L39">        panel.setLayout(new java.awt.GridLayout(1, 3));</span>
 
-<span class="fc" id="L41">        panel.add(gridSize);</span>
-<span class="fc" id="L42">        panel.add(mineCount);</span>
-<span class="fc" id="L43">        panel.add(startButton);</span>
-<span class="fc" id="L44">        frame.add(panel, BorderLayout.CENTER);</span>
+<span class="nc" id="L41">        panel.add(gridSize);</span>
+<span class="nc" id="L42">        panel.add(mineCount);</span>
+<span class="nc" id="L43">        panel.add(startButton);</span>
+<span class="nc" id="L44">        frame.add(panel, BorderLayout.CENTER);</span>
 
-<span class="fc" id="L46">        frame.setVisible(true);</span>
-<span class="fc" id="L47">    }</span>
+<span class="nc" id="L46">        frame.setVisible(true);</span>
+<span class="nc" id="L47">    }</span>
 
     private void startPressed(){
 <span class="nc" id="L50">        String size = gridSize.getText();</span>

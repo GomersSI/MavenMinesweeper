@@ -25,6 +25,8 @@ public class CellTest {
         beforeTest();
         testCell.setFlagged();
         Assertions.assertTrue(testCell.getFlagged(), "Failed set flagged.");
+        testCell.setFlagged();
+        Assertions.assertFalse(testCell.getFlagged(), "Failed set flagged.");
     }
     @Test
     public void testGetBomb(){
@@ -36,6 +38,8 @@ public class CellTest {
         beforeTest();
         testCell.setBomb();
         Assertions.assertTrue(testCell.getBomb(), "Failed set bomb.");
+        testCell.setBomb();
+        Assertions.assertFalse(testCell.getBomb(), "Failed set bomb.");
     }
     @Test
     public void testGetAdjacentBombs(){

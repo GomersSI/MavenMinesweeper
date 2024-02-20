@@ -4,15 +4,15 @@ import java.util.ArrayList;
 
 public class Column {
     private ArrayList&lt;Cell&gt; column;
-<span class="nc" id="L7">    public Column(int size){</span>
-<span class="nc" id="L8">        column = new ArrayList&lt;Cell&gt;();</span>
-<span class="nc bnc" id="L9" title="All 2 branches missed.">        for (int i = 0; i &lt; size; i++){</span>
-<span class="nc" id="L10">            column.add(new Cell());</span>
+<span class="fc" id="L7">    public Column(int size){</span>
+<span class="fc" id="L8">        column = new ArrayList&lt;Cell&gt;();</span>
+<span class="fc bfc" id="L9" title="All 2 branches covered.">        for (int i = 0; i &lt; size; i++){</span>
+<span class="fc" id="L10">            column.add(new Cell());</span>
         }
-<span class="nc" id="L12">    }</span>
+<span class="fc" id="L12">    }</span>
 
     public Cell getCell(int position){
-<span class="nc" id="L15">        return column.get(position);</span>
+<span class="fc" id="L15">        return column.get(position);</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

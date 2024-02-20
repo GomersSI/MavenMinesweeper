@@ -1,0 +1,10 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+MavenMinesweeper,org.example,GUI.new ActionListener() {...},16,0,0,0,4,0,2,0,2,0
+MavenMinesweeper,org.example,GUI.new MouseAdapter() {...},239,0,16,0,31,0,10,0,2,0
+MavenMinesweeper,org.example,Main,9,0,0,0,3,0,2,0,2,0
+MavenMinesweeper,org.example,NewGameGUI.new ActionListener() {...},10,0,0,0,3,0,2,0,2,0
+MavenMinesweeper,org.example,NewGameGUI,183,0,12,0,36,0,11,0,5,0
+MavenMinesweeper,org.example,Gameboard,392,0,60,0,86,0,42,0,12,0
+MavenMinesweeper,org.example,Cell,2,51,2,2,0,18,2,9,0,9
+MavenMinesweeper,org.example,GUI,182,0,4,0,31,0,3,0,1,0
+MavenMinesweeper,org.example,Column,28,0,2,0,6,0,3,0,2,0

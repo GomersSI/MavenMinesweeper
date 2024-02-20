@@ -4,7 +4,7 @@ MavenMinesweeper,org.example,GUI.new MouseAdapter() {...},239,0,16,0,31,0,10,0,2
 MavenMinesweeper,org.example,Main,9,0,0,0,3,0,2,0,2,0
 MavenMinesweeper,org.example,NewGameGUI.new ActionListener() {...},4,6,0,0,2,1,1,1,1,1
 MavenMinesweeper,org.example,NewGameGUI,67,116,12,0,12,24,10,1,4,1
-MavenMinesweeper,org.example,Gameboard,9,383,7,53,3,83,9,33,2,10
+MavenMinesweeper,org.example,Gameboard,0,392,5,55,0,86,5,37,0,12
 MavenMinesweeper,org.example,Cell,0,53,0,4,0,18,0,11,0,9
 MavenMinesweeper,org.example,GUI,182,0,4,0,31,0,3,0,1,0
 MavenMinesweeper,org.example,Column,0,28,0,2,0,6,0,3,0,2

@@ -71,6 +71,17 @@ public class GameboardTest {
         }
         Assertions.assertEquals(totalBomb, 3, "Failed test place bombs");
     }
+    @Test
+    public void testGetFlippedAdjacent(){
+        beforeTest(5, 1);
+        Assertions.assertEquals(testGameboard.getFlippedAdjacent().size(), 0,"Failed get flipped adjacent.");
+    }
+    @Test
+    public void testSetFlippedAdjacent(){
+        beforeTest(5, 1);
+        testGameboard.setFlippedAdjacent();
+        Assertions.assertEquals(testGameboard.getFlippedAdjacent().size(), 0,"Failed get flipped adjacent.");
+    }
     private void beforeTest(int size, int bombs){
         testGameboard = new Gameboard(size, bombs);
     }

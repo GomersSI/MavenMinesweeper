@@ -25,8 +25,8 @@ public class Gameboard {
 <span class="fc" id="L25">        return totalBombs;</span>
     }
     public void setFlippedAdjacent(){
-<span class="nc" id="L28">        flippedAdjacent = new ArrayList&lt;int[]&gt;();</span>
-<span class="nc" id="L29">    }</span>
+<span class="fc" id="L28">        flippedAdjacent = new ArrayList&lt;int[]&gt;();</span>
+<span class="fc" id="L29">    }</span>
     public int getFlaggedCells(){
 <span class="fc" id="L31">        return flaggedCells;</span>
     }
@@ -57,7 +57,7 @@ public class Gameboard {
 <span class="fc" id="L57">        return currentCell.getBomb();</span>
     }
     public ArrayList&lt;int[]&gt; getFlippedAdjacent(){
-<span class="nc" id="L60">        return flippedAdjacent;</span>
+<span class="fc" id="L60">        return flippedAdjacent;</span>
     }
     public void flagCell(int x, int y){
 <span class="fc" id="L63">        Cell currentCell = gameboard.get(x).getCell(y);</span>
@@ -71,11 +71,11 @@ public class Gameboard {
             do {
 <span class="fc" id="L72">                int newx = rand.nextInt(gameSize);</span>
 <span class="fc" id="L73">                int newy = rand.nextInt(gameSize);</span>
-<span class="pc bpc" id="L74" title="3 of 6 branches missed.">                if (!gameboard.get(newx).getCell(newy).getBomb() &amp;&amp; newx != x &amp;&amp; newy != y){</span>
+<span class="pc bpc" id="L74" title="2 of 6 branches missed.">                if (!gameboard.get(newx).getCell(newy).getBomb() &amp;&amp; newx != x &amp;&amp; newy != y){</span>
 <span class="fc" id="L75">                    gameboard.get(newx).getCell(newy).setBomb();</span>
 <span class="fc" id="L76">                    addedBomb = true;</span>
                 }
-<span class="pc bpc" id="L78" title="1 of 2 branches missed.">            }while (!addedBomb);</span>
+<span class="fc bfc" id="L78" title="All 2 branches covered.">            }while (!addedBomb);</span>
         }
 <span class="fc bfc" id="L80" title="All 2 branches covered.">        for (int i = 0; i &lt;gameSize; i++){</span>
 <span class="fc bfc" id="L81" title="All 2 branches covered.">            for (int j = 0; j &lt; gameSize; j++){</span>

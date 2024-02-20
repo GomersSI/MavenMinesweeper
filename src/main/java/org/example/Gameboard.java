@@ -11,10 +11,12 @@ public class Gameboard {
     private int flippedCells = 0;
     private int flaggedCells = 0;
     private boolean bombsPlaced = false;
+    private Random rand;
     public Gameboard(int size, int bombCount){
         gameSize = size;
         totalBombs = bombCount;
         gameboard = new ArrayList<Column>();
+        rand = new Random();
         for (int i =0; i < size;i++){
             gameboard.add(new Column(size));
         }
@@ -65,7 +67,6 @@ public class Gameboard {
     }
     private void placeBombs(int x, int y){
         for (int i = 0; i < totalBombs; i++){
-            Random rand = new Random();
             boolean addedBomb = false;
             do {
                 int newx = rand.nextInt(gameSize);
